@@ -1,0 +1,6 @@
+customer_id,full_name,email,phone,ssn,signup_date,country
+1001,Ravi Shah,ravi.shah@example.com,415-555-0199,,2023-01-12,US
+1002,Meera Iyer,meera.iyer@example.com,415-555-0158,521-11-4487,2023-02-03,US
+1003,John Doe,,212-555-0111,,2023-02-20,US
+1004,Wei Chen,wei.chen@example.com,,,2023-03-01,SG
+1002,Meera Iyer,meera.iyer@example.com,415-555-0158,521-11-4487,2023-02-03,US

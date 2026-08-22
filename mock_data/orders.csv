@@ -1,0 +1,6 @@
+order_id,customer_id,product_sku,amount,order_date,notes
+5001,1001,SKU-100,49.99,2023-04-01,Left at front door
+5002,1002,SKU-204,120.00,2023-04-02,Please call for delivery ravi.shah@example.com
+5003,1003,SKU-100,49.99,2023-04-03,
+5004,1004,SKU-305,15.50,2023-04-04,Customer SSN on file 521-11-4487 for verification
+5005,1001,SKU-204,120.00,2023-04-05,
