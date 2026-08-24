@@ -1,0 +1,22 @@
+{
+  "customers": {
+    "primary_key": "customer_id",
+    "required": ["customer_id", "full_name", "email"],
+    "formats": {"email": "email", "signup_date": "date"}
+  },
+  "orders": {
+    "primary_key": "order_id",
+    "required": ["order_id", "customer_id", "product_sku", "amount"],
+    "formats": {"order_date": "date", "amount": "decimal"}
+  },
+  "products": {
+    "primary_key": "product_sku",
+    "required": ["product_sku", "product_name", "price"],
+    "formats": {"price": "decimal"}
+  },
+  "legacy_customers": {
+    "primary_key": "cust_id",
+    "required": ["cust_id", "full_name"],
+    "formats": {"last_order_date": "date"}
+  }
+}

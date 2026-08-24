@@ -1,0 +1,5 @@
+{
+  "customers": {"owner": "Priya Menon (PR-02)", "domain": "Customer", "retention_class": "customer_records"},
+  "orders": {"owner": "Daniel Osei (PR-02)", "domain": "Sales", "retention_class": "order_records"},
+  "products": {"owner": "Daniel Osei (PR-02)", "domain": "Product", "retention_class": "reference_data"}
+}

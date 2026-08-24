@@ -1,0 +1,26 @@
+{
+  "pull_request": "PR-482",
+  "author": "t.nakamura (PR-08)",
+  "branch": "feature/billing-backfill",
+  "changes": [
+    {
+      "op": "add_column",
+      "dataset": "orders",
+      "column": "customer_ssn_backup",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "op": "drop_column",
+      "dataset": "orders",
+      "column": "notes"
+    },
+    {
+      "op": "add_column",
+      "dataset": "products",
+      "column": "supplier_name",
+      "type": "string",
+      "description": "Registered name of the supplying vendor."
+    }
+  ]
+}

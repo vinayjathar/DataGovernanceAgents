@@ -1,0 +1,46 @@
+{
+  "approved_zones": {
+    "customers": ["full_name", "email", "phone", "ssn"],
+    "legacy_customers": ["full_name", "email_address", "contact_phone"],
+    "orders": [],
+    "products": []
+  },
+  "rules": [
+    {
+      "id": "POL-001",
+      "title": "Sensitive data confined to approved locations",
+      "regulation": "GDPR Art. 5(1)(c) - data minimisation",
+      "severity": "high",
+      "scope": "column",
+      "when": {"sensitivity": "restricted"},
+      "require": "approved_zone"
+    },
+    {
+      "id": "POL-002",
+      "title": "Every dataset has an accountable owner",
+      "regulation": "Internal - Governance Charter s.4",
+      "severity": "medium",
+      "scope": "dataset",
+      "when": {},
+      "require": "has_owner"
+    },
+    {
+      "id": "POL-003",
+      "title": "Datasets holding restricted data carry a retention class",
+      "regulation": "GDPR Art. 5(1)(e) - storage limitation",
+      "severity": "medium",
+      "scope": "dataset",
+      "when": {"has_restricted_column": true},
+      "require": "has_retention_class"
+    },
+    {
+      "id": "POL-004",
+      "title": "Restricted columns are linked to an approved glossary term",
+      "regulation": "Internal - Metadata Standard s.2",
+      "severity": "low",
+      "scope": "column",
+      "when": {"sensitivity": "restricted"},
+      "require": "has_glossary_term"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "terms": [
+    {
+      "term": "Customer Identifier",
+      "definition": "The unique identifier assigned to a customer across the enterprise.",
+      "domain": "Customer",
+      "synonyms": ["customer_id", "cust_id"]
+    },
+    {
+      "term": "Email Address",
+      "definition": "A customer's primary electronic mail address used for contact and identity resolution.",
+      "domain": "Customer",
+      "synonyms": ["email", "email_address"]
+    },
+    {
+      "term": "Telephone Number",
+      "definition": "A customer's primary contact telephone number in national format.",
+      "domain": "Customer",
+      "synonyms": ["phone", "contact_phone"]
+    },
+    {
+      "term": "Customer Name",
+      "definition": "The full legal name of an individual customer.",
+      "domain": "Customer",
+      "synonyms": ["full_name"]
+    },
+    {
+      "term": "Order Identifier",
+      "definition": "The unique identifier assigned to a sales order.",
+      "domain": "Sales",
+      "synonyms": ["order_id"]
+    },
+    {
+      "term": "Order Amount",
+      "definition": "The gross monetary value of a sales order in reporting currency.",
+      "domain": "Sales",
+      "synonyms": ["amount", "order_amount"]
+    },
+    {
+      "term": "Product SKU",
+      "definition": "The stock keeping unit uniquely identifying a sellable product.",
+      "domain": "Product",
+      "synonyms": ["product_sku", "sku"]
+    }
+  ]
+}

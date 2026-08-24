@@ -1,0 +1,4 @@
+cust_id,full_name,email_address,contact_phone,last_order_date,source_system
+CUST-1001,Ravi Shah,ravi.shah@example.com,415-555-0199,2019-11-04,SIEBEL
+CUST-1003,Jon Doe,,212-555-0111,2019-08-22,SIEBEL
+CUST-9001,Priya Nair,priya.nair@example.com,650-555-0142,2020-01-15,SIEBEL

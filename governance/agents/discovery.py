@@ -7,13 +7,13 @@ reversible, so nothing here waits for a human.
 
 from __future__ import annotations
 
-import csv
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
 from governance.agents.base import Agent, Authority
 from governance.catalog import DatasetColumn, DatasetEntry
+from governance.sources import read_rows
 
 
 def _infer_single_type(value: str) -> str:
@@ -58,8 +58,7 @@ class DiscoveryAgent(Agent):
         return entries
 
     def _scan_file(self, path: Path) -> DatasetEntry:
-        with path.open(newline="", encoding="utf-8") as f:
-            rows = list(csv.DictReader(f))
+        rows = read_rows(path)
 
         columns = []
         for field_name in rows[0].keys() if rows else []:

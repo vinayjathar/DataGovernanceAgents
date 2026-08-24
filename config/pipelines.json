@@ -1,0 +1,22 @@
+{
+  "pipelines": [
+    {
+      "name": "enrich_orders",
+      "inputs": ["orders"],
+      "output": "orders_enriched",
+      "consumes_columns": {"orders": ["order_id", "customer_id", "amount", "notes"]}
+    },
+    {
+      "name": "build_customer_360",
+      "inputs": ["customers", "orders_enriched"],
+      "output": "customer_360",
+      "consumes_columns": {"customers": ["customer_id", "full_name", "email", "ssn"]}
+    },
+    {
+      "name": "exec_revenue_dashboard",
+      "inputs": ["customer_360"],
+      "output": "rpt_exec_revenue",
+      "consumes_columns": {}
+    }
+  ]
+}

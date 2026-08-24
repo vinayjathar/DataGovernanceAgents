@@ -26,8 +26,13 @@ NAME_HINTS = {
 
 # dataset -> columns where policy has already approved PII to live.
 # Anything detected outside this map is treated as an exception.
+#
+# From Phase 1 on, the real source of these zones is config/policy_rules.json
+# via AG-07's PolicyEngine — this dict is the standalone fallback so the
+# Phase 0 pipeline still runs without a policy engine wired in.
 DEFAULT_APPROVED_ZONES: dict[str, set[str]] = {
     "customers": {"full_name", "email", "phone", "ssn"},
+    "legacy_customers": {"full_name", "email_address", "contact_phone"},
     "orders": set(),
     "products": set(),
 }
@@ -55,9 +60,19 @@ class ClassificationAgent(Agent):
     name = "Classification & Sensitivity"
     authority = Authority.RECOMMEND
 
-    def __init__(self, bus, catalog, approved_zones: dict[str, set[str]] | None = None) -> None:
+    def __init__(
+        self,
+        bus,
+        catalog,
+        approved_zones: dict[str, set[str]] | None = None,
+        policy_engine=None,
+    ) -> None:
         super().__init__(bus, catalog)
-        self.approved_zones = approved_zones or DEFAULT_APPROVED_ZONES
+        self.policy_engine = policy_engine
+        if policy_engine is not None:
+            self.approved_zones = policy_engine.zones_map()
+        else:
+            self.approved_zones = approved_zones or DEFAULT_APPROVED_ZONES
 
     def handle_dataset_discovered(self, payload: dict) -> None:
         dataset_name = payload["dataset"]

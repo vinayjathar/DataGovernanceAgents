@@ -1,0 +1,9 @@
+{
+  "schedules": {
+    "customer_records": {"retention_years": 7, "basis": "Last customer activity"},
+    "order_records": {"retention_years": 3, "basis": "Order date (tax record requirement)"},
+    "reference_data": {"retention_years": 99, "basis": "Retained while product catalog is active"},
+    "unclassified": {"retention_years": 5, "basis": "Default schedule pending owner assignment"}
+  },
+  "legal_holds": ["customer_360"]
+}

@@ -1,0 +1,16 @@
+{
+  "manifests": [
+    {
+      "model": "churn_propensity_v3",
+      "owner": "s.kapoor (PR-10)",
+      "datasets": ["customers", "orders"],
+      "purpose": "Predict 90-day churn probability for retention campaigns"
+    },
+    {
+      "model": "product_recommender_v1",
+      "owner": "j.alvarez (PR-10)",
+      "datasets": ["products", "orders"],
+      "purpose": "Rank product affinity for the storefront"
+    }
+  ]
+}

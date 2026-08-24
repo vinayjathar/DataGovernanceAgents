@@ -1,0 +1,25 @@
+{
+  "requests": [
+    {
+      "id": "REQ-001",
+      "requester": "j.alvarez",
+      "persona": "PR-10",
+      "dataset": "products",
+      "purpose": "Quarterly pricing analysis"
+    },
+    {
+      "id": "REQ-002",
+      "requester": "s.kapoor",
+      "persona": "PR-10",
+      "dataset": "customers",
+      "purpose": "Churn model feature engineering"
+    },
+    {
+      "id": "REQ-003",
+      "requester": "m.oyelaran",
+      "persona": "PR-09",
+      "dataset": "orders",
+      "purpose": "Regression test fixtures for the billing service"
+    }
+  ]
+}
